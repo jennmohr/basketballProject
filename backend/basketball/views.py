@@ -19,16 +19,19 @@ def read_json_file(filename):
         return data
 
 def collect_unique_id_combinations(data, groupId):
-    unique_combinations = set()
+    unique_combinations = {}
 
     for obj in data:
-        if groupId in obj and isinstance(obj[groupId], list):
-            ids = sorted(obj[groupId])  # Sort the IDs to ensure the same combination order
-            for r in range(1, len(ids) + 1):
-                for comb in combinations(ids, r):
-                    unique_combinations.add(tuple(comb))
+        combination = tuple(obj[groupId])
 
-    return list(unique_combinations)
+        if combination in unique_combinations:
+            unique_combinations[combination] += 1
+        else:
+            unique_combinations[combination] = 1
+
+    result = [{'combination': list(comb), 'count': count} for comb, count in unique_combinations.items()]
+    result.sort(key=lambda x: x['count'], reverse=True)
+    return result
 
 def find_object_with_matching_value(data, key, value):
     for obj in data:
@@ -67,26 +70,18 @@ def gather_unique_players(data, gameId, groupId):
     unique_players = {}
     team_players = getTeamPlayers(None, gameId, groupId)
 
-    # Create a set to keep track of unique jersey numbers encountered
-    unique_jersey_numbers = set()
-
     for obj in data:
         if groupId in obj and isinstance(obj[groupId], list):
             for player in obj[groupId]:
-                jersey_number = player.get('jersey')
+                jersey_number = player['jersey']
 
-                # Check if jersey_number exists and if it's not already in the unique set
-                if jersey_number and jersey_number not in unique_jersey_numbers:
-                    player_id = player.get('playerId')
+                # Add player info directly to the dictionary if not already present
+                if jersey_number not in unique_players:
+                    player_id = player['playerId']
+                    unique_players[jersey_number] = {'jersey': jersey_number, 'playerId': player_id}
 
-                    # Instead of using a dictionary, add the player info as a tuple to the set
-                    unique_players[jersey_number] = (jersey_number, player_id)
-                    
-                    # Add jersey_number to the unique set to avoid duplicates
-                    unique_jersey_numbers.add(jersey_number)
-
-    # Convert the set of tuples back to a list of dictionaries
-    return [{'jersey': player_info[0], 'playerId': player_info[1]} for player_info in unique_players.values()]
+    # Return the list of unique player information from the dictionary values
+    return list(unique_players.values())
 
 def getMatchingPlayerGroups(request, gameId, groupId):
     filename = f'basketball/data/{gameId}_events.jsonl'
@@ -101,4 +96,10 @@ def getPlayersInGame(request, gameId, groupId):
     objects = read_jsonl_file(filepath)
     unique_players = gather_unique_players(objects, gameId, groupId)
     return HttpResponse(json.dumps(unique_players))
+
+def getDataLength(request, gameId):
+    filename = f'basketball/data/{gameId}_events.jsonl'
+    filepath = os.path.join(os.getcwd(), filename)
+    objects = read_jsonl_file(filepath)
+    return HttpResponse(len(objects))
 

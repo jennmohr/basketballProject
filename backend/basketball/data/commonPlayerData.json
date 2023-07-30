@@ -3,268 +3,333 @@
         {
             "player": "Luka Dončić",
             "jersey": "77",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
+            
         },
         {
             "player": "Jalen Brunson",
             "jersey": "13",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Spencer Dinwiddie",
             "jersey": "26",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
         },
         {
             "player": "Dorian Finney-Smith",
             "jersey": "10",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Reggie Bullock",
             "jersey": "25",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Maxi Kleber",
             "jersey": "42",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Dāvis Bertāns",
             "jersey": "44",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Trey Burke",
             "jersey": "3",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
         },
         {
             "player": "Frank Ntilikina",
             "jersey": "21",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Dwight Powell",
             "jersey": "7",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Sterling Brown",
             "jersey": "0",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Josh Green",
             "jersey": "8",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Marquese Chriss",
             "jersey": "32",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         }
     ],
     "GSW": [
         {
             "player": "Stephen Curry",
             "jersey": "30",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
         },
         {
             "player": "Klay Thompson",
             "jersey": "11",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Andrew Wiggins",
             "jersey": "22",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Jordan Poole",
             "jersey": "3",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Draymond Green",
             "jersey": "23",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Kevon Looney",
             "jersey": "5",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Moses Moody",
             "jersey": "4",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Otto Porter Jr.",
             "jersey": "32",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Jonathan Kuminga",
             "jersey": "00",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Nemanja Bjelica",
             "jersey": "8",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Damion Lee",
             "jersey": "1",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Juan Toscano-Anderson",
             "jersey": "95",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
+        }, 
+        {
+            "player": "Gary Payton II",
+            "jersey": "0",
+            "imageURL": "",
+            "position": "SG"
+        },
+        {
+            "player": "Andre Iguodala",
+            "jersey": "9",
+            "imageURL": "",
+            "position": "SF"
         }
     ],
     "BOS": [
         {
             "player": "Jayson Tatum",
             "jersey": "0",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Jaylen Brown",
             "jersey": "7",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Marcus Smart",
             "jersey": "36",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
         },
         {
             "player": "Grant Williams",
             "jersey": "12",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Derrick White",
             "jersey": "9",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Al Horford",
             "jersey": "42",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Robert Williams",
             "jersey": "44",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Payton Pritchard",
             "jersey": "11",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
         },
         {
             "player": "Daniel Theis",
             "jersey": "27",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Nik Stauskas",
             "jersey": "13",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Luke Kornet",
             "jersey": "40",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Aaron Nesmith",
             "jersey": "26",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Juwan Morgan",
             "jersey": "4",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Malik Fitts",
             "jersey": "8",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         }
     ],
     "MIA": [
         {
             "player": "Jimmy Butler",
             "jersey": "22",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Bam Adebayo",
             "jersey": "13",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Victor Oladipo",
             "jersey": "4",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Gabe Vincent",
             "jersey": "2",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
         },
         {
             "player": "Max Strus",
             "jersey": "31",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Kyle Lowry",
             "jersey": "7",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PG"
         },
         {
             "player": "P.J. Tucker",
             "jersey": "17",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "PF"
         },
         {
             "player": "Caleb Martin",
             "jersey": "16",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         },
         {
             "player": "Tyler Herro",
             "jersey": "14",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Duncan Robinson",
             "jersey": "55",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SG"
         },
         {
             "player": "Dewayne Dedmon",
             "jersey": "21",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Omer Yurtseven",
             "jersey": "77",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "C"
         },
         {
             "player": "Haywood Highsmith",
             "jersey": "24",
-            "imageURL": ""
+            "imageURL": "",
+            "position": "SF"
         }
     ]
 }

@@ -1,30 +1,63 @@
-import './App.css';
+import "./App.css";
 import { useEffect, useState } from "react";
-import PlayerGroup from './components/playerGroup';
-import { getUniqueLineups } from './services/playersService';
+import Lineups from "./components/lineups";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
+import { getGames } from "./services/commonDataService";
 
 function App() {
-  const [playerGroups, setPlayerGroups] = useState([]);
-  const gameId = '0042100301';
-  const groupId = 'homePlayers'
+  const [selectedGameId, setSelectedGameId] = useState(null);
+  const [selectedGame, setSelectedGame] = useState(null);
+  const [selectedGroupId, setSelectedGroupId] = useState("homePlayers");
+  const [gameList, setGameList] = useState([]);
 
   useEffect(() => {
-    getPlayerGroups();
-  }, [])
+    getGameList();
+  }, []);
 
-  const getPlayerGroups = async () =>  {
-    const data = await getUniqueLineups(gameId, groupId);
-    setPlayerGroups(data);
-  }
+  const getGameList = async () => {
+    const data = await getGames();
+    setGameList(data);
+  };
 
   return (
     <div className="App">
-      { playerGroups && playerGroups.map((group) => {
-          return <div><PlayerGroup
-            playerArray={group}
-          /><br/></div>;
-        })
-      }
+      <div className="buttons">
+        <DropdownButton
+          id="dropdown-basic-button"
+          title={selectedGame ? selectedGame.gameType : "Select a game!"}
+        >
+          {gameList &&
+            gameList.map((game) => {
+              return (
+                <Dropdown.Item onClick={() => setSelectedGame(game)}>
+                  {game.gameType}
+                </Dropdown.Item>
+              );
+            })}
+        </DropdownButton>
+        {selectedGame && (
+          <DropdownButton
+            id="dropdown-basic-button"
+            className="secondButton"
+            title={
+              selectedGroupId == "homePlayers"
+                ? selectedGame.homeTeam
+                : selectedGame.awayTeam
+            }
+          >
+            <Dropdown.Item onClick={() => setSelectedGroupId("homePlayers")}>
+              {selectedGame.homeTeam}
+            </Dropdown.Item>
+            <Dropdown.Item onClick={() => setSelectedGroupId("awayPlayers")}>
+              {selectedGame.awayTeam}
+            </Dropdown.Item>
+          </DropdownButton>
+        )}
+      </div>
+      {selectedGame && selectedGroupId && (
+        <Lineups gameId={selectedGame.gameId} groupId={selectedGroupId} />
+      )}
     </div>
   );
 }

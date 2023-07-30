@@ -9,5 +9,6 @@ urlpatterns = [
     path("teamPlayers/<gameId>/<groupId>", views.getTeamPlayers, name="teamPlayers"),
     path("players/<team>", views.getPlayersView, name="team"),
     path("games/", views.getGamesView, name="games"),
+    path("events/length/<gameId>", views.getDataLength, name="eventsLength")
 
 ]

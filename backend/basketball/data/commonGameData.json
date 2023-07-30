@@ -1,110 +1,110 @@
 [
     {
        "gameId":"0042100301",
-       "homeTeam":"BOS",
-       "awayTeam":"MIA",
-       "gameType":"East Finals"
+       "homeTeam":"MIA",
+       "awayTeam":"BOS",
+       "gameType":"Eastern Conference Finals -  Game 1"
     },
     {
        "gameId":"0042100302",
-       "homeTeam":"BOS",
-       "awayTeam":"MIA",
-       "gameType":"Finals"
+       "homeTeam":"MIA",
+       "awayTeam":"BOS",
+       "gameType":"Eastern Conference Finals -  Game 2"
     },
     {
        "gameId":"0042100303",
-       "homeTeam":"MIA",
-       "awayTeam":"BOS",
-       "gameType":"Finals"
+       "homeTeam":"BOS",
+       "awayTeam":"MIA",
+       "gameType":"Eastern Conference Finals -  Game 3"
     },
     {
        "gameId":"0042100304",
-       "homeTeam":"MIA",
-       "awayTeam":"BOS",
-       "gameType":"Finals"
+       "homeTeam":"BOS",
+       "awayTeam":"MIA",
+       "gameType":"Eastern Conference Finals -  Game 4"
     },
     {
        "gameId":"0042100305",
-       "homeTeam":"BOS",
-       "awayTeam":"MIA",
-       "gameType":"East Finals"
+       "homeTeam":"MIA",
+       "awayTeam":"BOS",
+       "gameType":"Eastern Conference Finals -  Game 5"
     },
     {
        "gameId":"0042100306",
-       "homeTeam":"MIA",
-       "awayTeam":"BOS",
-       "gameType":"East Finals"
+       "homeTeam":"BOS",
+       "awayTeam":"MIA",
+       "gameType":"Eastern Conference Finals -  Game 6"
     },
     {
        "gameId":"0042100307",
-       "homeTeam":"BOS",
-       "awayTeam":"MIA",
-       "gameType":"East Finals"
+       "homeTeam":"MIA",
+       "awayTeam":"BOS",
+       "gameType":"Eastern Conference Finals -  Game 7"
     },
     {
        "gameId":"0042100311",
        "homeTeam":"GSW",
        "awayTeam":"DAL",
-       "gameType":"West Finals"
+       "gameType":"Western Conference Finals -  Game 1"
     },
     {
        "gameId":"0042100312",
        "homeTeam":"GSW",
        "awayTeam":"DAL",
-       "gameType":"West Finals"
+       "gameType":"Western Conference Finals -  Game 2"
     },
     {
        "gameId":"0042100313",
        "homeTeam":"DAL",
        "awayTeam":"GSW",
-       "gameType":"West Finals"
+       "gameType":"Western Conference Finals -  Game 3"
     },
     {
        "gameId":"0042100314",
        "homeTeam":"DAL",
        "awayTeam":"GSW",
-       "gameType":"West Finals"
+       "gameType":"Western Conference Finals -  Game 4"
     },
     {
        "gameId":"0042100315",
        "homeTeam":"GSW",
        "awayTeam":"DAL",
-       "gameType":"West Finals"
+       "gameType":"Western Conference Finals -  Game 5"
     },
     {
        "gameId":"0042100401",
        "homeTeam":"GSW",
        "awayTeam":"BOS",
-       "gameType":"Finals"
+       "gameType":"NBA Finals - Game 1"
     },
     {
        "gameId":"0042100402",
        "homeTeam":"GSW",
        "awayTeam":"BOS",
-       "gameType":"Finals"
+       "gameType":"NBA Finals - Game 2"
     },
     {
        "gameId":"0042100403",
        "homeTeam":"BOS",
        "awayTeam":"GSW",
-       "gameType":"Finals"
+       "gameType":"NBA Finals - Game 3"
     },
     {
        "gameId":"0042100404",
        "homeTeam":"BOS",
        "awayTeam":"GSW",
-       "gameType":"Finals"
+       "gameType":"NBA Finals - Game 4"
     },
     {
        "gameId":"0042100405",
        "homeTeam":"GSW",
        "awayTeam":"BOS",
-       "gameType":"Finals"
+       "gameType":"NBA Finals - Game 5"
     },
     {
        "gameId":"0042100406",
        "homeTeam":"BOS",
        "awayTeam":"GSW",
-       "gameType":"Finals"
+       "gameType":"NBA Finals - Game 6"
     }
  ]
