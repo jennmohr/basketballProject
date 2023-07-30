@@ -5,6 +5,7 @@ import {
   getActivePlayers,
   getTeamPlayers,
   getEventLength,
+  getEventTypes
 } from "../services/playersService";
 
 function Lineups(props) {
@@ -56,6 +57,8 @@ function Lineups(props) {
                 team={teamPlayers}
                 comboLen={group.count}
                 totalLen={eventLength}
+                gameId={props.gameId}
+                groupId={props.groupId}
               />
               <br />
             </div>

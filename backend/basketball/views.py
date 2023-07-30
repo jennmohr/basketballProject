@@ -83,6 +83,37 @@ def gather_unique_players(data, gameId, groupId):
     # Return the list of unique player information from the dictionary values
     return list(unique_players.values())
 
+def split_array_by_shotclock(json_array):
+    result = []
+    current_subarray = []
+
+    for i, obj in enumerate(json_array):
+        if i > 0 and obj.get('shotClock', 0) > json_array[i - 1].get('shotClock', 0):
+            if current_subarray:
+                result.append(current_subarray)
+            current_subarray = []
+
+        current_subarray.append(obj)
+
+    if current_subarray:
+        result.append(current_subarray)
+
+    return result
+
+def organize_possessions(possessions):
+    home_possessions = []
+    away_possessions = []
+
+    for possession in possessions:
+        first_event_player_id = possession[0]['playerId']
+
+        if first_event_player_id in possession[0]['homePlayers']:
+            home_possessions.append(possession)
+        elif first_event_player_id in possession[0]['awayPlayers']:
+            away_possessions.append(possession)
+
+    return {'home': home_possessions, 'away': away_possessions}
+
 def getMatchingPlayerGroups(request, gameId, groupId):
     filename = f'basketball/data/{gameId}_events.jsonl'
     filepath = os.path.join(os.getcwd(), filename)
@@ -103,3 +134,49 @@ def getDataLength(request, gameId):
     objects = read_jsonl_file(filepath)
     return HttpResponse(len(objects))
 
+def getAllPlays(request, gameId):
+    filename = f'basketball/data/{gameId}_events.jsonl'
+    filepath = os.path.join(os.getcwd(), filename)
+    objects = read_jsonl_file(filepath)
+    plays = split_array_by_shotclock(objects)
+    return HttpResponse(json.dumps(plays))
+
+def getTeamPossessions(request, gameId, groupId):
+    filename = f'basketball/data/{gameId}_events.jsonl'
+    filepath = os.path.join(os.getcwd(), filename)
+    objects = read_jsonl_file(filepath)
+    plays = split_array_by_shotclock(objects)
+    possessions = organize_possessions(plays)
+    if groupId == 'home':
+        return HttpResponse(json.dumps(possessions['home']))
+    elif groupId == 'away':
+        return HttpResponse(json.dumps(possessions['away']))
+    else: 
+        return HttpResponse('Cannot get possessions')
+    
+def get_unique_combinations_with_event_count(data, groupId):
+    unique_combinations = {}
+
+    for obj in data:
+        combination = tuple(obj[groupId])
+        event_type = obj['eventType']
+
+        combination_key = str(combination)  # Convert the tuple to a string
+        if combination_key not in unique_combinations:
+            unique_combinations[combination_key] = {event_type: 1}
+        else:
+            if event_type in unique_combinations[combination_key]:
+                unique_combinations[combination_key][event_type] += 1
+            else:
+                unique_combinations[combination_key][event_type] = 1
+
+    return unique_combinations
+
+def getLineupStats(request, gameId, groupId):
+    filename = f'basketball/data/{gameId}_events.jsonl'
+    filepath = os.path.join(os.getcwd(), filename)
+    objects = read_jsonl_file(filepath)
+    comboEvents = get_unique_combinations_with_event_count(objects, groupId)
+    return HttpResponse(json.dumps(comboEvents))
+    
+    

@@ -10,7 +10,7 @@
 }
 
 .playerGroup{
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .cardGroup{
@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 20px;
+  margin-top: 27px;
 }
 
 .secondButton{
@@ -83,4 +83,29 @@
 h1{
   line-height: 68px !important;
   margin-bottom: 30px !important;
+  font-weight: bold !important;
+}
+
+.dropdown-menu {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.dataImg{
+  width: 125px;
+  margin-left:10px;
+}
+
+.data{
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 80%;
+  color: #fefefe;
+}
+
+.statsTable{
+  margin-top: 35px;
 }

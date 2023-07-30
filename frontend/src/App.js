@@ -23,12 +23,16 @@ function App() {
   return (
     <div className="app">
       <div className="header">
-      <h1 class="display-2">NBA Lineup Analysis</h1>
-      <p className="description" class="lead">This is a tool that uses NBA tracking and event data to gather unique lineups and analyze their usage and efficiency. Get started by picking a game!</p>
-      <div className="buttons">
+        <h1 class="display-2">NBA Lineup Analysis</h1>
+        <p className="description" class="lead">
+          This is a tool that uses NBA tracking and event data to gather unique
+          lineups and analyze their usage and efficiency. Get started by
+          selecting a game.
+        </p>
+        <div className="buttons">
           <DropdownButton
             id="dropdown-basic-button"
-            title={selectedGame ? selectedGame.gameType : "Select a game!"}
+            title={selectedGame ? selectedGame.gameType : "Select Game"}
           >
             {gameList &&
               gameList.map((game) => {
@@ -58,10 +62,18 @@ function App() {
             </DropdownButton>
           )}
         </div>
+        <div className="data">
+          Data provided by <img class="dataImg" src="https://sportradar.com/wp-content/uploads/2023/02/Sportradar-Brand-Line_Color_White.svg"/>
+        </div>
       </div>
       <div className="container">
-        {selectedGame && selectedGroupId && (
+        {selectedGame && selectedGroupId ? (
           <Lineups gameId={selectedGame.gameId} groupId={selectedGroupId} />
+        ) : (
+          <p className="description" class="lead">
+            No game selected. To view lineup analysis, choose a game in the
+            sidebar to the left.
+          </p>
         )}
       </div>
     </div>

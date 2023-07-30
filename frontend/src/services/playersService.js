@@ -43,3 +43,14 @@ export function getEventLength(gameId) {
   });
 }
 
+export function getEventTypes(gameId, groupId) {
+  const url = `http://localhost:8000/basketball/stats/${gameId}/${groupId}`;
+
+  return fetch(url).then((response) => {
+    if (response.status >= 200 && response.status < 300) {
+      return Promise.resolve(response.json());
+    }
+    return Promise.reject(response);
+  });
+}
+
