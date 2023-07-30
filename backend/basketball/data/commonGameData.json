@@ -1,0 +1,110 @@
+[
+    {
+       "gameId":"0042100301",
+       "homeTeam":"BOS",
+       "awayTeam":"MIA",
+       "gameType":"East Finals"
+    },
+    {
+       "gameId":"0042100302",
+       "homeTeam":"BOS",
+       "awayTeam":"MIA",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100303",
+       "homeTeam":"MIA",
+       "awayTeam":"BOS",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100304",
+       "homeTeam":"MIA",
+       "awayTeam":"BOS",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100305",
+       "homeTeam":"BOS",
+       "awayTeam":"MIA",
+       "gameType":"East Finals"
+    },
+    {
+       "gameId":"0042100306",
+       "homeTeam":"MIA",
+       "awayTeam":"BOS",
+       "gameType":"East Finals"
+    },
+    {
+       "gameId":"0042100307",
+       "homeTeam":"BOS",
+       "awayTeam":"MIA",
+       "gameType":"East Finals"
+    },
+    {
+       "gameId":"0042100311",
+       "homeTeam":"GSW",
+       "awayTeam":"DAL",
+       "gameType":"West Finals"
+    },
+    {
+       "gameId":"0042100312",
+       "homeTeam":"GSW",
+       "awayTeam":"DAL",
+       "gameType":"West Finals"
+    },
+    {
+       "gameId":"0042100313",
+       "homeTeam":"DAL",
+       "awayTeam":"GSW",
+       "gameType":"West Finals"
+    },
+    {
+       "gameId":"0042100314",
+       "homeTeam":"DAL",
+       "awayTeam":"GSW",
+       "gameType":"West Finals"
+    },
+    {
+       "gameId":"0042100315",
+       "homeTeam":"GSW",
+       "awayTeam":"DAL",
+       "gameType":"West Finals"
+    },
+    {
+       "gameId":"0042100401",
+       "homeTeam":"GSW",
+       "awayTeam":"BOS",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100402",
+       "homeTeam":"GSW",
+       "awayTeam":"BOS",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100403",
+       "homeTeam":"BOS",
+       "awayTeam":"GSW",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100404",
+       "homeTeam":"BOS",
+       "awayTeam":"GSW",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100405",
+       "homeTeam":"GSW",
+       "awayTeam":"BOS",
+       "gameType":"Finals"
+    },
+    {
+       "gameId":"0042100406",
+       "homeTeam":"BOS",
+       "awayTeam":"GSW",
+       "gameType":"Finals"
+    }
+ ]
