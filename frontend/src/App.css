@@ -1,13 +1,15 @@
-.App {
+.container {
   text-align: center;
   background-color: #fefefe;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 65%;
+  padding-top: 50px;
+  margin-left: 25% !important;
 }
 
 .playerGroup{
-  width: 900px;
   margin-bottom: 30px;
 }
 
@@ -24,13 +26,13 @@
 
 .buttons{
   display: flex;
-  width: 900px;
-  margin: 30px;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
 }
 
 .secondButton{
-  margin-left: 20px;
+  margin-top: 20px;
 }
 
 .secondBadge{
@@ -45,4 +47,40 @@
 
 .loadingSpace{
   margin-top: 100px;
+}
+
+.header{
+  width: 25%;
+  background-color: #212529;
+  height: 100%;
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  left: 0;
+  padding: 45px;
+  color:#fefefe;
+}
+
+.app{
+  display: flex;
+}
+
+.progressLabel{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 80%;
+  color: #6c757d;
+}
+
+
+.description{
+  width: 90%;
+}
+
+
+
+h1{
+  line-height: 68px !important;
+  margin-bottom: 30px !important;
 }

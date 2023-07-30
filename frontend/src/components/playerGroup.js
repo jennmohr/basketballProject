@@ -28,7 +28,8 @@ function PlayerGroup(props) {
           })}
       </div>
       <div className="progressBar">
-        <ProgressBar now={progress} label={`${progress}%`} />
+        <div className="progressLabel"><div>Percentage of Game with Lineup </div><div>{progress}%</div></div>
+        <ProgressBar now={progress} />
       </div>
     </div>
   );
