@@ -250,6 +250,11 @@
             "jersey": "8",
             "imageURL": "",
             "position": "PF"
+        },{
+            "player": "Sam Hauser",
+            "jersey": "30",
+            "imageURL": "",
+            "position": "SF"
         }
     ],
     "MIA": [
