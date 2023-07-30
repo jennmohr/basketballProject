@@ -63,7 +63,11 @@ function App() {
           )}
         </div>
         <div className="data">
-          Data provided by <img class="dataImg" src="https://sportradar.com/wp-content/uploads/2023/02/Sportradar-Brand-Line_Color_White.svg"/>
+          Data provided by{" "}
+          <img
+            class="dataImg"
+            src="https://sportradar.com/wp-content/uploads/2023/02/Sportradar-Brand-Line_Color_White.svg"
+          />
         </div>
       </div>
       <div className="container">

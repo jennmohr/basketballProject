@@ -53,4 +53,3 @@ export function getEventTypes(gameId, groupId) {
     return Promise.reject(response);
   });
 }
-

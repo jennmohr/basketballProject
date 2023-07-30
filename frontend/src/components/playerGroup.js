@@ -2,7 +2,7 @@ import getMatchingObject from "../utils/getMatchingObject";
 import Player from "./player";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import StatsTable from "./statsTable";
-import { getEventTypes } from '../services/playersService'
+import { getEventTypes } from "../services/playersService";
 import { useEffect, useState } from "react";
 
 function PlayerGroup(props) {
@@ -10,18 +10,18 @@ function PlayerGroup(props) {
 
   useEffect(() => {
     getLineupStats();
-  }, [])
+  }, []);
 
   const getLineupStats = async () => {
     const data = await getEventTypes(props.gameId, props.groupId);
-    const playerTuple = `('${props.playerArray.join("', '")}')`
+    const playerTuple = `('${props.playerArray.join("', '")}')`;
     for (const key in data) {
       if (key === playerTuple) {
-        setLineupStats(data[key])
+        setLineupStats(data[key]);
       }
     }
-  }
-  
+  };
+
   const progress = ((props.comboLen / props.totalLen) * 100).toFixed(1);
   return (
     <div className="playerGroup">
@@ -47,12 +47,13 @@ function PlayerGroup(props) {
           })}
       </div>
       <div className="progressBar">
-        <div className="progressLabel"><div>Percentage of Game with Lineup </div><div>{progress}%</div></div>
+        <div className="progressLabel">
+          <div>Percentage of Game with Lineup </div>
+          <div>{progress}%</div>
+        </div>
         <ProgressBar now={progress} />
       </div>
-      <div className="statsTable">
-        {<StatsTable stats={lineupStats}/>}
-      </div>
+      <div className="statsTable">{<StatsTable stats={lineupStats} />}</div>
     </div>
   );
 }

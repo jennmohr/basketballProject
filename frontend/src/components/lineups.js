@@ -5,7 +5,6 @@ import {
   getActivePlayers,
   getTeamPlayers,
   getEventLength,
-  getEventTypes
 } from "../services/playersService";
 
 function Lineups(props) {
@@ -68,7 +67,10 @@ function Lineups(props) {
         <div className="loadingSpace">
           <h3>Loading...</h3>
           <br></br>
-          <img className="loadingImg" src="https://i.pinimg.com/originals/27/3d/59/273d598e4856924672bf1a0ce62f0d54.gif"/>
+          <img
+            className="loadingImg"
+            src="https://i.pinimg.com/originals/27/3d/59/273d598e4856924672bf1a0ce62f0d54.gif"
+          />
         </div>
       )}
     </div>
