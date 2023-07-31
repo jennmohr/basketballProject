@@ -69,6 +69,7 @@ function Lineups(props) {
           <br></br>
           <img
             className="loadingImg"
+            alt="Loading"
             src="https://i.pinimg.com/originals/27/3d/59/273d598e4856924672bf1a0ce62f0d54.gif"
           />
         </div>

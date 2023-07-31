@@ -6,7 +6,6 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import { getGames } from "./services/commonDataService";
 
 function App() {
-  const [selectedGameId, setSelectedGameId] = useState(null);
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedGroupId, setSelectedGroupId] = useState("homePlayers");
   const [gameList, setGameList] = useState([]);
@@ -48,7 +47,7 @@ function App() {
               id="dropdown-basic-button"
               className="secondButton"
               title={
-                selectedGroupId == "homePlayers"
+                selectedGroupId === "homePlayers"
                   ? selectedGame.homeTeam
                   : selectedGame.awayTeam
               }
@@ -66,6 +65,7 @@ function App() {
           Data provided by{" "}
           <img
             class="dataImg"
+            alt="sportradar logo"
             src="https://sportradar.com/wp-content/uploads/2023/02/Sportradar-Brand-Line_Color_White.svg"
           />
         </div>
