@@ -16,14 +16,37 @@ To get started with running the NBA Lineup Analysis tool, clone the repo locally
 
 Because of the privacy of the data being used in the application, the events and tracking data from each provided game needs to be downloaded directly from S3. This can be done using the AWS CLI and the AWS credentials distributed to WISD participants. After the AWS CLI is downloaded and the credentials are populated into the AWS config, follow the following steps to download the events and tracking data. 
 
-`cd util`
-`python3 download_data.py`
+```
+cd util
+```
+```
+python3 download_data.py
+```
 
-There will be 32 files following the naming convention {gameId}_events.jsonl & {gameId}_tracking.jsonl. Select all of the files downloaded from S3 and move them into the backend>basketball>data folder.
-download data from download_data.py util
-move downloaded files into backend data folder
-download any dependencies
-run api backend 
-test that it's running
-run react frontend
+There will be 32 files following the naming convention `{gameId}_events.jsonl` & `{gameId}_tracking.jsonl`. Select all of the files downloaded from S3 and move them into the `backend>basketball>data` folder. 
+
+
+
+The backend of the application that pulls inforrmation and processes the .jsonl files & data is written in django. For our front-end to receive the relevant information, the backend needs to be running. Keep this running while interacting with the application.
+
+```
+cd backend
+```
+```
+python3 manage.py runserver
+```
+
+To test that the server is running correctly, navigate to `http://localhost:8000/basketball` and there should be a message:
+```
+Hello, world. You're at the basketball index.
+```
+
+Once this is up and running, open up a new terminal that will run alongside the backend. This terminal will be running our front-end React code. 
+```
+cd frontend
+```
+```
+npm start
+```
+With our front-end and back-end both running alongside each other, the application should be ready to go! Have fun exploring the data and reach out to `jennifer@bpmohr.com` or Jenn Mohr on the WISD Slack.
 
