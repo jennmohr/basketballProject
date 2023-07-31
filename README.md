@@ -23,7 +23,7 @@ cd util
 python3 download_data.py
 ```
 
-There will be 32 files following the naming convention `{gameId}_events.jsonl` & `{gameId}_tracking.jsonl`. Select all of the files downloaded from S3 and move them into the `backend>basketball>data` folder. 
+There will be 32 files following the naming convention `{gameId}_events.jsonl` & `{gameId}_tracking.jsonl`. Select all of the files populated into the `utils` folder and move them into the `backend>basketball>data` folder. 
 
 
 
@@ -44,6 +44,9 @@ Hello, world. You're at the basketball index.
 Once this is up and running, open up a new terminal that will run alongside the backend. This terminal will be running our front-end React code. 
 ```
 cd frontend
+```
+```
+npm install
 ```
 ```
 npm start
