@@ -53,3 +53,10 @@ npm start
 ```
 With our front-end and back-end both running alongside each other, the application should be ready to go! Have fun exploring the data and reach out to `jennifer@bpmohr.com` or Jenn Mohr on the WISD Slack.
 
+# Further Improvements
+If given more time, I would add the following improvements:
+- **External API Usage**: All of the data used in the application is pulled from the provided SportRadar data and two small files of relevant player/game data that I pulled from `https://www.basketball-reference.com/`. If given more time, I would have liked to integrate external third-party APIs to provide more relevant information about players and their performances in the game.
+- **Data Analysis**: Most of my background is in web & application development, so I was not able to come up with any advanced data science solutions. If given more time, I would have liked to do more research into data analysis and processing. I think implementing a ML solution with predicting future lineup stats/efficiencies vs certain opponents would have been interesting!
+- **Responsive Styling/Accessibility**: Although I styled my application with the Bootstrap framework, I'll admit that the application isn't very responsive to browser sizes/devices. I did not spend much time worrying about mobile/tablet styling because I was navigating development under the assumption that the application would only ever be run on desktop devices. This would have been worked on given I had more time. I would have also made more efforts to make this application accessible for everyone. 
+
+
